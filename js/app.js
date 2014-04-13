@@ -1,4 +1,9 @@
 $(document).ready(function() {
+	doIntro();
+	playGame();
+});
+	
+function playGame() {
 	$('.ryu').mouseenter(function () {
 		$('.ryu-still').hide();
 		$('.ryu-ready').show();
@@ -25,24 +30,25 @@ $(document).ready(function() {
 		$('.ryu-throwing').hide();
 		$('.ryu-ready').show();
 	})
-});
-$(document).keydown(function(event) {
-	if (event.which == 88) {
-		$('.ryu-still').hide();
-		$('.ryu-cool').show();
-	}
-}).keyup(function(event) {
-	if (event.keyCode == 88) {
-		$('.ryu-cool').hide();
-		$('.ryu-still').show();
-	}
-});
+
+	.keydown(function(e) {
+		if (e.which == 88) {
+			$('.ryu-still').hide();
+			$('.ryu-cool').show();
+		}
+	}).keyup(function(e) {
+		if (e.keyCode == 88) {
+			$('.ryu-cool').hide();
+			$('.ryu-still').show();
+		}
+	});
+}
 
 function doIntro() {
 	$(document).ready(function() {
 		$('.sf-logo').fadeIn(3500, function() {
 			$(this).fadeOut(1000, function() {
-				$('.text').fadeIn(1500);
+				$('.how-to').fadeIn(1500);
 			})
 		});
 	})
