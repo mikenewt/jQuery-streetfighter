@@ -42,13 +42,11 @@ function playGame() {
 }
 
 function doIntro() {
-	$(document).ready(function() {
-		$('.sf-logo').fadeIn(3500, function() {
-			$(this).fadeOut(1000, function() {
-				$('.how-to').fadeIn(1500);
-			})
-		});
-	})
+	$('.sf-logo').fadeIn(3500, function() {
+		$(this).fadeOut(1000, function() {
+			$('.how-to').fadeIn(1500);
+		})
+	});
 }
 
 function playHadouken() {
